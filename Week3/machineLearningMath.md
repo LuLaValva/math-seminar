@@ -1,0 +1,13 @@
+---
+author: "Lucas LaValva"
+date: "February 4, 2022"
+title: "Machine Learning, Data Science, and PCA"
+---
+
+I am confused about the audience that Sharoon Saxena has intended to address in her 2019 article. I have a computer science background with some experience in machine learning, so I was familiar with all of the topics discussed in the general overview. In this overview, however, I was baffled by the fact that the readers were expected to have had experience with gradient descent but not with derivatives in calculus. The first article read as a loosely connected amalgymation of basic unrelated topics in math and data science, with little explanation as to how the two fields are connected except that they _just are_. I understand that this assignment is not meant to be a criticism or critique of the article but instead an exploration of new ideas in math, so I will focus the rest of my discussion on principle component analysis.
+
+To speak proverbially, once a field has been presented with a sufficient hammer everything in it becomes a nail. One of the first concepts introduced to newcomers in machine learning is the idea of gradient descent, with something similar to Newton's method for finding zeroes in a function; given a random point on a graph, it is possible to effectively approximate a local minimum or maximum with an iterative approach. I've heard that gradient descent is used so often in this field that machine learning engineers treat it as a primitive operation in their calculations. The article presents that the first principle component, $Z^1$ is calculated using
+$$
+  Z^1=\Phi^{11}X^1 + \Phi^{21}X^2 + \ldots + \Phi^{p1}X^p,
+$$
+where $\Phi^{k1}$ represents an unknown "loading vector" and $X^k$ represents a set of observations associated with a predictor. Though it is not explicitly stated in the article, my understanding is that the set of loading vectors $(\Phi)$ is calculated using gradient descent. Even with additional research, I was not able to acquire a complete understanding of $Z^2$, the second principle component. While it is intuitive that in order to remove correlation it is required that the two princple components are orthogonal, it is not clear to me why there are only $\min(n-1, p)$ vectors available. In any dimension higher than 2, a vector has infinitely many other vectors which are orthogonal to it. This question will be a source of further research for me.
